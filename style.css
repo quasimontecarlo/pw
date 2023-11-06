@@ -1,0 +1,93 @@
+
+:root {
+	/* based on nord color scheme */
+	/* dark blues, 100 is the darkest */
+	--db100: #2e3440;
+	--db80: #3b4252;
+	--db60: #434c5e;
+	--db40: #4c566a;
+	/* the whites, 100 is the lightest */
+	--w100: #eceff4;
+	--w80: #e5e9f0;
+	--w60: #d8dee9;
+	--w40: #b2bed2;
+	--b100: #c4cedd; /* beige */
+	/* cold colors */
+	--lg: #8fbcbb; /* light green */
+	--cy: #88c0d0; /* cyan */
+	--dp: #81a1c1; /* dark purple */
+	--lb: #5e81ac; /* light blue */
+	/* warm colors */
+	--pr: #bf616a; /* pastel red */
+	--po: #d08770; /* pastel orange */
+	--py: #ebcb8b; /* pastel yellow */
+	--pg: #a3be8c; /* pastel green */
+	--pp: #b48ead; /* pastel pink */
+}
+
+/* setting background colors */
+.navbar {
+	background-color: var(--db100);
+}
+#about {
+	background-color: var(--db100);
+}
+#wrkd_on {
+	background-color: var(--db100);
+}
+.wrkd_on_txt.card {
+	background-color: var(--db100);
+}
+
+#footer {
+	background-color: var(--db100);
+}
+
+/* unifor p text color */
+p {
+	color: var(--w40);
+}
+
+img {
+	filter: grayscale(80%);
+}
+
+img:hover {
+	filter: grayscale(50%);
+}
+
+.hero-text {
+	font-size: 1rem;
+	text-align: left;
+	transform: translate(0%, 100%);
+}
+
+
+/* 	worked on 	*/
+/* wrkd_on title */
+.h1_wrkd_on {
+	font-size: 1.5rem;
+	color: var(--pp);
+	text-align: right;
+}
+.wrkd_on_txt.card {
+	cursor: pointer;
+}
+.h4_wrkd_on {
+	margin-top: -0.5rem;
+	margin-left: -1rem;
+	font-size: 1.15rem;
+	color: var(--w60);
+}
+.p_wrkd_on {
+	margin-top: -0.25rem;
+	margin-left: -1rem;
+}
+/* social media styling */
+.social-icons {
+	font-size: 36px;
+	cursor: pointer;
+}
+.fa-linkedin:hover, .fa-imdb:hover {
+	color: var(--pp);
+}
