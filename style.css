@@ -47,15 +47,21 @@ p {
 	color: var(--w40);
 }
 
-
-img {
-	filter: grayscale(85%);
+/* removing defalt link appearance */
+a {
+	color: #FFFFFF;
+	text-decoration: none !important;
 }
 
-img:hover {
+/* images greyscale trick */
+.grid {
+	filter: grayscale(85%);
+}
+.grid:hover {
 	filter: grayscale(0%);
 }
 
+/* customizing text */
 .hero-text {
 	font-size: 1rem;
 	text-align: left;
@@ -83,12 +89,22 @@ img:hover {
 	margin-top: -0.25rem;
 	margin-left: -1rem;
 }
-
-/* social media styling
-.social-icons {
-	font-size: 36px;
-	cursor: pointer;
+.footer_text {
+	color: var(--db40)
 }
-.fa-linkedin:hover, .fa-imdb:hover {
-	color: var(--pp);
-}*/
+.svg_logo {
+	height: 2.75rem;
+	transform: translate(1rem, -0.5rem);
+	cursor: pointer;
+	filter: invert(32%) sepia(25%) saturate(484%) hue-rotate(182deg) brightness(91%) contrast(84%);
+}
+.svg_logo:hover{
+	filter: invert(80%) sepia(31%) saturate(154%) hue-rotate(178deg) brightness(92%) contrast(85%);
+}
+
+.icon {
+	fill: var(--db40);
+}
+.icon:hover {
+	fill: var(--w40);
+}
