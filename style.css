@@ -52,7 +52,21 @@ a {
 	color: #FFFFFF;
 	text-decoration: none !important;
 }
-
+.navbar-brand {
+        color: var(--w60);
+}
+.navbar-brand:hover {
+        color: var(--pp);
+}
+.nav-link {
+        color: var(--db40);
+}
+.nav-link:hover {
+        color: var(--w40);
+}
+.nav-link.disabled {
+        color: var(--db80);
+}
 /* images greyscale trick */
 .grid {
 	filter: grayscale(85%);
@@ -76,25 +90,24 @@ a {
 	color: var(--pp);
 	text-align: right;
 }
-.wrkd_on_txt.card {
-	cursor: pointer;
+.card-body {
+    border: 0rem !important;
+    margin: 0rem !important;
+    padding: 0rem !important;
 }
 .h4_wrkd_on {
-	margin-top: -0.5rem;
-	margin-left: -1rem;
+	margin-top: 0.5rem;
+	/*margin-left: -1rem;*/
+    margin-bottom: 0rem;
 	font-size: 0.8rem;
 	color: var(--w60);
-}
-.p_wrkd_on {
-	margin-top: -0.25rem;
-	margin-left: -1rem;
 }
 .footer_text {
 	color: var(--db40)
 }
 .svg_logo {
 	height: 2.75rem;
-	transform: translate(1rem, -0.5rem);
+	transform: translate(1rem, -0.7rem);
 	cursor: pointer;
 	filter: invert(32%) sepia(25%) saturate(484%) hue-rotate(182deg) brightness(91%) contrast(84%);
 }
