@@ -106,14 +106,17 @@ a {
 
 /* blog section */
 .username {
-    margin-right: 1.5rem;
+    margin-right: 0.5rem;
+	color: var(--db60);
 }
 .log {
-    margin-right: 1.5rem;
+    margin-right: 0.5rem;
+	color: var(--db60);
 }
 .bog_post {
 }
 .datetime {
+	color: var(--db60);
 }
 
 /* grid section */
