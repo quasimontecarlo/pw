@@ -22,17 +22,19 @@
 	--py: #ebcb8b; /* pastel yellow */
 	--pg: #a3be8c; /* pastel green */
 	--pp: #b48ead; /* pastel pink */
-    color-scheme: dark;
+	color-scheme: dark;
 }
-/* scrollbar style */
+/* scrollbar style firefox */
 html {
-    scrollbar-color: var(--db100) var(--w40) !important;
+    scrollbar-color: var(--db40) var(--db100) !important;
 }
-
-html::-webkit-scrollbar-thumb {
-    background: rgb(255,0,0);
+/* scrollbar style webkit */
+::-webkit-scrollbar-thumb {
+    background: var(--db40);
 }
-
+::-webkit-scrollbar-track {
+	background: var(--db100);
+}
 
 /* setting background colors */
 .navbar {
