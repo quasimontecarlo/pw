@@ -22,7 +22,17 @@
 	--py: #ebcb8b; /* pastel yellow */
 	--pg: #a3be8c; /* pastel green */
 	--pp: #b48ead; /* pastel pink */
+    color-scheme: dark;
 }
+/* scrollbar style */
+html {
+    scrollbar-color: var(--db100) var(--w40) !important;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgb(255,0,0);
+}
+
 
 /* setting background colors */
 .navbar {
@@ -30,6 +40,9 @@
 }
 #about {
 	background-color: var(--db100);
+}
+#blog {
+    background-color: var(--db100);
 }
 #wrkd_on {
 	background-color: var(--db100);
@@ -75,21 +88,33 @@ a {
 	filter: grayscale(0%);
 }
 
-/* customizing text */
+/* about text */
 .hero-text {
 	font-size: 1rem;
 	text-align: left;
 	transform: translate(0%, 100%);
 }
 
-
-/* 	worked on 	*/
-/* wrkd_on title */
-.h1_wrkd_on {
+/* section title */
+.h1_navlink {
 	font-size: 1.5rem;
 	color: var(--pp);
 	text-align: right;
 }
+
+/* blog section */
+.username {
+    margin-right: 1.5rem;
+}
+.log {
+    margin-right: 1.5rem;
+}
+.bog_post {
+}
+.datetime {
+}
+
+/* grid section */
 .card-body {
     border: 0rem !important;
     margin: 0rem !important;
