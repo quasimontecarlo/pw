@@ -102,13 +102,12 @@ a {
 
 /* about text */
 .about {
-    max-height: 25rem;
-    min-height: 10rem;
+    min-height: 15rem;
 }
 .hero_text {
 	font-size: 1rem;
 	text-align: left;
-    transform: translate(0, 100%);
+    transform: translate(0, 95%);
 }
 
 /* section title */
