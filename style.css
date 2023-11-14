@@ -43,6 +43,9 @@ html {
 }
 
 /* setting background colors */
+body {
+    background-color: var(--db100);
+}
 .navbar {
 	background-color: var(--db100);
 }
@@ -107,7 +110,7 @@ a {
 .hero_text {
 	font-size: 1rem;
 	text-align: left;
-    transform: translate(0, 95%);
+    transform: translate(0, 8rem);
 }
 
 /* section title */
@@ -168,18 +171,20 @@ a {
 	color: var(--db60)
 }
 .svg_logo {
-	height: 2.75rem;
-	transform: translate(1rem, -0.7rem);
+    height: 2.75rem;
+    transform: translate(1rem, -0.7rem);
 	cursor: pointer;
 	filter: invert(28%) sepia(21%) saturate(508%) hue-rotate(182deg) brightness(96%) contrast(92%);
 }
 .svg_logo:hover{
 	filter: invert(80%) sepia(31%) saturate(154%) hue-rotate(178deg) brightness(92%) contrast(85%);
 }
-
 .icon {
 	fill: var(--db60);
 }
 .icon:hover {
 	fill: var(--w40);
+}
+.icon_trans {
+    transform: translate(0, -0.78rem);
 }
