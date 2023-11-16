@@ -88,6 +88,9 @@ a {
 .nav_blog:hover {
 	color: var(--dg);
 }
+.nav_blog:active {
+	color: var(--dg);
+}
 .nav_wrkd:hover {
 	color: var(--dr);
 }
