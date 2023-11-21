@@ -41,7 +41,10 @@ html {
 ::-webkit-scrollbar-track {
 	background: var(--db100);
 }
-
+/* fixing anchors to take into account fixed header size */
+.anchor {
+    scroll-margin-top: 56px !important;
+}
 /* setting background colors */
 body {
     background-color: var(--db100);
@@ -85,11 +88,14 @@ a {
 .nav-link {
     color: var(--db40);
 }
+.nav_about:hover {
+    color: var(--w40);
+}
 .nav_blog:hover {
 	color: var(--dg);
 }
-.nav_blog:active {
-	color: var(--dg);
+.navbar-nav a.active {
+	color: var(--pg) !important;
 }
 .nav_wrkd:hover {
 	color: var(--dr);
@@ -190,4 +196,12 @@ a {
 }
 .icon_trans {
     transform: translate(0, -0.78rem);
+}
+
+/* BLOG */
+/* sidebar color */
+.sidebar {
+    border-style: dotted;
+    border-width: 0.2rem;
+    border-color: var(--db60);
 }
