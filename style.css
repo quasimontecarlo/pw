@@ -68,6 +68,10 @@ body {
 #footer {
 	background-color: var(--db100);
 }
+/* uiform desaturation of images */
+.desat {
+	filter: brightness(90%) grayscale(10%);
+}
 
 /* unifor p text color */
 p {
