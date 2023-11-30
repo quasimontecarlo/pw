@@ -208,6 +208,7 @@ a {
     border-style: dotted;
     border-width: 0.2rem;
     border-color: var(--db60);
+	overflow: hidden !important;
 }
 /* sidebar icons */
 #sidebar_icons {
@@ -215,12 +216,11 @@ a {
     cursor: pointer;
 	filter: invert(28%) sepia(21%) saturate(508%) hue-rotate(182deg) brightness(96%) contrast(92%);
 }
-#sidebar_text {
-    max-width: 2rem;
-    padding: 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.bug_link {
+	color: var(--db20);
+}
+.post_link:hover {
+	color: var(--db20);
 }
 .anchor.post {
     border-bottom-style: dotted !important;
