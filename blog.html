@@ -14,9 +14,12 @@
 	<!-- bootstrap CDN -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></script>
-	<!-- gfont icons -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-	<!-- linking css file -->
+    <!-- linking highlightsjs -->
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/nord.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js" crossorigin="anonymous"></script>
+    <script>hljs.highlightAll();</script>
+    <!-- linking css file -->
 	<link rel="stylesheet" href="style.css">
     <meta name="theme-color" content="#2e3440">
 </head>
@@ -38,15 +41,15 @@
 			<div class="row flex-nowrap">
 				
 				<!-- sidebar -->
-				<div class="col-1 col-md-4 sidebar px-1 px-md-2 justify-content-center">
-					<div class="pt-2 justify-content-center">
+				<div class="col-1 col-md-4 sidebar px-0 px-md-2">
+					<div class="d-flex flex-column align-items-center align-items-md-start pt-2">
 
 						<a href="#" class="bug_link d-flex mb-3">
 							<div class="col-2 col-md-1">
                             	<img id="sidebar_icons" class="bug_icon" src="imgs/blog/icons/bug_V03.svg" alt="index bug icon">
 							</div>
-							<div class="col ms-3 text-truncate d-none d-md-inline">
-								<span class="fs-5 px-1 sidebar_text">index</span>
+							<div class="col ms-3 align-items-center text-truncate d-none d-md-inline">
+								<span class="fs-5 px-3 sidebar_text">index</span>
 							</div>
 						</a>
 						
@@ -138,7 +141,7 @@
 											<img id="sidebar_icons" class="music_icon" src="imgs/blog/icons/piano_V03.svg" alt="music machines icon">
 										</div>
 										<div class="col ms-3 align-items-center text-truncate d-none d-md-inline">
-											<span class="sidebar_text align-items-center">music machines</span>
+											<span class="sidebar_text">music machines</span>
 										</div>
 									</div>
 								</a>
@@ -148,31 +151,80 @@
 				</div>
 
 				<!-- article -->
-				<div class="col ms-3 pe-2">
+				<div class="col-11 col-md-8 ms-3 pe-4">
 					<div class="row">
 						<section id="algae" class="anchor post ps-0">
                             <h1 class="post_title text-truncate">algae: user defined entropy</h1>
 							<div class="row">
-								<div class="col-10">
-				 					<h4 class="tags text-truncate">#gen_art #procussing #sw</h4>
+								<div class="col-8">
+				 					<h4 class="tags text-truncate">#gen_art #processing #sw</h4>
 								</div>
-								<div class="col-2">
-									<h4 class="tags text-end text-truncate">@crltt</h4>
+								<div class="col-4">
+									<h4 class="tags text-end">@crltt</h4>
 								</div>
 							</div>
 							</br>
-							<div class="card border-0 rounded wrkd_on_txt">
+							<div class="card border-0 rounded card_txt_background">
 								<img class="card-img-top desat" src="/imgs/blog/articles/algae/algae_logo_V03.png" alt="algae logo">
-								<div class="card-body d-none d-md-block border-0 rounded-0">
-									<h4 class="card-title h4_wrkd_on">algae logo</h4>
+								<div class="card-body border-0 rounded-0">
+									<h4 class="card-title card_txt_template">algae logo</h4>
 								</div>
 							</div>
 							</br>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at consectetur lorem donec massa sapien faucibus et. Ornare arcu odio ut sem nulla pharetra. Egestas purus viverra accumsan in. Leo duis ut diam quam nulla. Adipiscing commodo elit at imperdiet dui accumsan sit. Nisl rhoncus mattis rhoncus urna neque viverra justo. Sit amet cursus sit amet dictum sit amet justo donec. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Id aliquet lectus proin nibh nisl. Sit amet nisl purus in. Fermentum odio eu feugiat pretium. <i>Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus.</i> In fermentum posuere urna nec tincidunt praesent. Et malesuada fames ac turpis egestas maecenas pharetra convallis.</br></br>
-							<em>the goal</em></br>
-							Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Aenean euismod elementum nisi quis eleifend quam. Magna ac placerat vestibulum lectus mauris ultrices. Viverra mauris in aliquam sem. Morbi non arcu risus quis varius quam quisque. Aliquam ultrices sagittis orci a scelerisque. Elementum nibh tellus molestie nunc. Mauris in aliquam sem fringilla ut. A scelerisque purus semper eget duis at tellus at urna. Dignissim diam quis enim lobortis. Sem et tortor consequat id porta nibh venenatis. Sed tempus urna et pharetra pharetra massa. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Magna fermentum iaculis eu non diam phasellus vestibulum.</br>
-							<b>the idea</b></br>
-							Mattis aliquam faucibus purus in massa tempor nec. Libero nunc consequat interdum varius sit amet mattis vulputate.<strong> Id donec ultrices tincidunt arcu non sodales neque sodales.</strong> Pretium lectus quam id leo in vitae. Turpis egestas pretium aenean pharetra. Eget duis at tellus at. Et tortor consequat id porta nibh venenatis cras. Nulla aliquet enim tortor at auctor urna nunc id. Tellus cras adipiscing enim eu turpis.<small>Rhoncus aenean vel elit scelerisque.</small> Nunc vel risus commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio. Gravida <del>cum sociis natoque</del> penatibus et magnis dis parturient. Tortor condimentum lacinia quis vel eros. Nunc eget lorem dolor sed viverra ipsum.<mark>Mauris</mark> a diam maecenas sed enim ut sem viverra aliquet. Luctus venenatis lectus magna fringilla urna porttitor rhoncus. Iaculis at erat pellentesque adipiscing commodo. Tellus orci ac auctor augue.</br>
+                            <em>the goal</em></br>
+                            </p>
+                            
+                            <div class="row g-3">
+                                <div class="col-12 col-lg-6 card_grid">
+                                    <div class="card border-0 rounded card_txt_background">
+                                        <img class="card-img-top" src="imgs/blog/articles/algae/algae_example_03.png" alt="algae example">
+                                        <div class="card-body d-none d-md-block">
+                                            <h4 class="card-title card_txt_template">some algae example outputs</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 card_grid">
+                                    <div class="card border-0 rounded card_txt_background">
+                                        <img class="card-img-top" src="imgs/blog/articles/algae/algae_example_01.png" alt="algae example">
+                                        <div class="card-body d-none d-md-block">
+                                            <h4 class="card-title card_txt_template">some algae example outputs</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 card_grid">
+                                    <div class="card border-0 rounded card_txt_background">
+                                        <img class="card-img-top" src="imgs/blog/articles/algae/algae_example_02.png" alt="algae example">
+                                        <div class="card-body d-none d-md-block">
+                                            <h4 class="card-title card_txt_template">some algae example outputs</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 card_grid">
+                                    <div class="card border-0 rounded card_txt_background">
+                                        <img class="card-img-top" src="imgs/blog/articles/algae/algae_example_04.png" alt="algae example">
+                                        <div class="card-body d-none d-md-block">
+                                            <h4 class="card-title card_txt_template">some algae example outputs</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </br>
+
+                            <p>Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Aenean euismod elementum nisi quis eleifend quam. Magna ac placerat vestibulum lectus mauris ultrices. Viverra mauris in aliquam sem. Morbi non arcu risus quis varius quam quisque. Aliquam ultrices sagittis orci a scelerisque. Elementum nibh tellus molestie nunc. Mauris in aliquam sem fringilla ut. A scelerisque purus semper eget duis at tellus at urna. Dignissim diam quis enim lobortis. Sem et tortor consequat id porta nibh venenatis. Sed tempus urna et pharetra pharetra massa. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Magna fermentum iaculis eu non diam phasellus vestibulum.</br>
+                            </br><b>the idea</b>
+                            </p>
+
+                            <div class="row">
+                                <div class="col-12 code_block">
+                                    <pre><code class="language-python">thislist = ["apple", "banana", "cherry"]
+if "apple" in thislist:
+    print("Yes, 'apple' is in the fruits list")</code></pre>
+                                </div>
+                            </div>
+
+
+                            <p>Mattis aliquam faucibus purus in massa tempor nec. Libero nunc consequat interdum varius sit amet mattis vulputate.<strong> Id donec ultrices tincidunt arcu non sodales neque sodales.</strong> Pretium lectus quam id leo in vitae. Turpis egestas pretium aenean pharetra. Eget duis at tellus at. Et tortor consequat id porta nibh venenatis cras. Nulla aliquet enim tortor at auctor urna nunc id. Tellus cras adipiscing enim eu turpis.<small>Rhoncus aenean vel elit scelerisque.</small> Nunc vel risus commodo viverra maecenas accumsan lacus. Ornare quam viverra orci sagittis eu volutpat odio. Gravida <del>cum sociis natoque</del> penatibus et magnis dis parturient. Tortor condimentum lacinia quis vel eros. Nunc eget lorem dolor sed viverra ipsum.<mark>Mauris</mark> a diam maecenas sed enim ut sem viverra aliquet. Luctus venenatis lectus magna fringilla urna porttitor rhoncus. Iaculis at erat pellentesque adipiscing commodo. Tellus orci ac auctor augue.</br>
 							</p>
                         <section>
 					</div>
