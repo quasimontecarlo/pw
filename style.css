@@ -86,7 +86,7 @@ mark {
 /* removing defalt link appearance */
 a {
 	color: var(--db20);
-	text-decoration: none !important;
+	text-decoration: none;
 }
 .navbar-brand {
     color: var(--w60);
@@ -254,4 +254,10 @@ a {
 	margin-top: 0rem;
 	font-size: 1rem;
 	color: var(--db60);
+}
+.blog_body_link {
+	text-decoration: underline dotted !important;
+}
+.blog_body_link:hover {
+	color: var(--w40);
 }
