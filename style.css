@@ -259,5 +259,5 @@ a {
 	text-decoration: underline dotted !important;
 }
 .blog_body_link:hover {
-	color: var(--w40);
+	color: var(--w40) !important;
 }
