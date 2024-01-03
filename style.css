@@ -256,8 +256,8 @@ a {
 	color: var(--db60);
 }
 .blog_body_link {
-	text-decoration: underline dotted !important;
+	text-decoration: underline dotted;
 }
 .blog_body_link:hover {
-	color: var(--w40) !important;
+	color: var(--w40);
 }
