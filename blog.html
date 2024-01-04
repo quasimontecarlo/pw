@@ -197,7 +197,7 @@
 							<p><i>now, let's start</i></p>
 							</br>
 							<div class="card border-0 rounded card_txt_background">
-								<IMG class="card-img-top desat" src="/imgs/blog/articles/modular/modulargrid_rack_V02_003.png" alt="modulargrid temp rack build">
+								<img class="card-img-top desat" src="/imgs/blog/articles/modular/modulargrid_rack_V02_003.png" alt="modulargrid temp rack build">
 							<div class="card-body border-0 rounded-0">
 								<h4 class="card-title card_txt_template">modulargrid.net rack_V02 temporary build</h4>
 								</br>
@@ -328,21 +328,119 @@
 					</br>
 					<div class="row">
 						<section id="film" class="anchor post ps-0">
-                            <h1 class="post_title text-truncate text-decoration-line-through">filmography tool</h1>
+                            <h1 class="post_title text-truncate">filmography tool</h1>
 							<div class="row">
 								<div class="col-8">
 				 					<h4 class="tags text-truncate">#sw #python #film</h4>
 								</div>
 								<div class="col-4">
-									<h4 class="tags text-end">@quasi on ??/??/??</h4>
+									<h4 class="tags text-end">@quasi on 04/01/24</h4>
 								</div>
 							</div>
 							<p></p>
-							<p>coming soon</p>
-                    	</section>
+							<p>a while ago [i] was asked to do a presentation about my professional career, this meant having to prepare a few slides ... and in it a filmography one. The thought of having to search online for all the movie posters, resizing them and create a grid was as boring as the process would have been. That's why I decided to spend twice the amount of time to build this tool [i] am about to explain :).
+							</p>
+							</br>
+							<div class="card border-0 rounded card_txt_background">
+								<img class="card-img-top desat" src="/imgs/blog/articles/film/2024_hf_grid.png" alt="grido grid function example on Harrison Ford">
+							<div class="card-body border-0 rounded-0">
+								<h4 class="card-title card_txt_template">Harrison Ford 50 most popular shows in chronological order</h4>
+								</br>
+							</div>
+							<p><i>grido</i> is a little open source MIT licensed CLI tool with a very simple goal, search download and resize to the same height all the images found off an imdb advanced search page. This was the original goal, and also the current tool basic behaviour, but a quick look at the help section will reveal that it is, infact, way more capable then that. The tool with a combination of flags will allow the user to generate a complete grid.png image like shown here above. Now let's start with the technical explanation and how to use it.
+							</p>
+							<p>if you're using any linux distro or macOs youre in luck as grido is built for unix-like CLIs, [i]'ve personally tested the tool on both platforms and should be working fine. If you're using Windows you might make it work under <a href="https://learn.microsoft.com/en-us/windows/wsl/about" class="blog_body_link" target="_blank" rel="noopener noreferrer">WSL</a> but it is currently untested. Platform aside you only need to know how to open a command line in your system, and install python with your package manager of choice. If these basic prerequisites are satisfied then you can now follow the new steps.
+							</p>
+							<p><i>clone</i></br>
+the first step is to clone the reposotory locally on your computer, this just means you're going to copy the files needed for grido on your computer. After opening the command line choose where you would like to store the tool and cd to that location, the instruction here below will follow what [i] will do, but really it doesn't matter were you decide to place the tool.
+							</p>
+							<div class="col-12 code_block">
+								<pre><code class="language-bash">
+# make a dev directory to store the tool
+mkdir ~/dev
+# enter the directory
+cd dev
+# copy the tool
+git clone https://github.com/quasimontecarlo/grido.git
+# enter the folder
+cd grido
+								</code></pre>
+							</div>
+							<p><i>environment</i></br>
+it's always a good idea to create a container when installing a new tool, this way all its dependencies won't interfear with your system. I generally use virtualenv for which [i] will provide the instructions for, but any other env/container system will work fine.
+							</p>
+							<div class="col-12 code_block">
+                               <pre><code class="language-bash">
+# installing virtualenv to handle our environments
+python -m pip install virtualenv
+# creating our grido env 
+python -m virtualenv grido_env
+# activating the env
+source grido_env/bin/activate
+
+### Archlinux ###
+sudo pacman -S python-virtualenv
+virtualenv -p /usr/bin/python3 grido_env
+source grido_env/bin/activate
+								</code></pre>
+                            </div>
+							<p><i>requirements</i></br>
+now that we have copied the repo and have set up our environment we can install all the dependencies. [i]'ve set up a simple .txt file to make this as easy as possible.
+							</p>
+							<div class="col-12 code_block">
+								<pre><code class="language-bash">
+# installing dependencies
+python -m pip install -r requirements.txt
+								</code></pre>
+							</div>
+							<p><i>learn</i></br>
+Now that we have satisfied all the requirements we can learn how the tool works. Let's have a look at the help section of grido to start with, then we will discuss them more in depth.
+							</p>
+							<div class="col-12 code_block">
+								<pre><code class="language-bash">
+python grido.py --help
+'''
+usage: grido [-h] [-u URL] [-o OUT] [-s SIZE] [-l] [-c] [-d] [-g] [-gs GRIDSIZE] [-gnl GRIDNEWLINE] [-b] [-ko]
+
+this tools scrapes imdb advanced user search link, scrapes movie titles and year and searches images in duckduckgo, downloads them, and resizes them
+
+options:
+  -h, --help            show this help message and exit
+  -u URL, --url URL     the url link to imdb, default value $IMDBURL env variable
+  -o OUT, --out OUT     the output location on disk where the images will be saved, default value $IMDBFOLDER env variable
+  -s SIZE, --size SIZE  the height size in pxls, with will be calculated respectin the original aspect, default value 400
+  -l, --list            if enabled provides the list of movies found
+  -c, --crop            if enabled crops the width to the min width of the images found
+  -d, --deform          if enabled deforms the width to the median width of the images found
+  -g, --grid            if enabled creates a new image of a grid with all the images found inside
+  -gs GRIDSIZE, --gridSize GRIDSIZE
+                        control the grid image size, default 1920x1080, to make it work please use format $Wx$H
+  -gnl GRIDNEWLINE, --gridNewLine GRIDNEWLINE
+                        control when the movie list text goes to a new line, the value indicates after how many items there is a new line?, the value needs to be an integer
+  -b, --bypass          if enabled bypass search and goes directly to the folder to resize
+  -ko, --keepOriginals  if enabled stores the original images in a subfolder that the script will create
+'''
+								</code></pre>
+							</div>
+							<p></p>
+							<p>as previously stated the tool by default will scrape imdb advanced search page for movie titles, search for the posters on duckduckgo, download them and resize them all at the same height. Because of this it requires just two flags to work. The -u (--url) of the page it needs to scrape and the -o (--out) the folder where you want these images to be saved. If you often want to scrape the same page and want the images always in the same place you can also set up two env variables, $IMDBURL and $IMDBFOLDER, this will allow you to skip both flags as the tool will search the env variables if the flags are not provided. To customize the url you can simply click <a href="https://www.imdb.com/search/title/" class="blog_body_link" target="_blank" rel="noopener noreferrer">here</a> and customze the field cast and crew like in the picture here below. After you have specified the person you can also further customize your search with the other fields.
+							</p>
+							</br>
+							<div class="card border-0 rounded card_txt_background">
+								<a href="https://www.imdb.com/search/title/" target="_blank" rel="noopener noreferrer">
+									<img class="card-img-top desat" src="/imgs/blog/articles/film/imdb_as.png" alt="imdb advanced search website screenshot">
+								</a>
+							<div class="card-body border-0 rounded-0">
+								<h4 class="card-title card_txt_template">IMDB Advanced Search</h4>
+								</br>
+							</div>
+
+
+						</section>
 					</div>
 
 					<!-- building a webpage -->
+                            </div>
 					</br>
 					<div class="row">
 						<section id="web" class="anchor post ps-0">
