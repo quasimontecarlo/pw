@@ -408,7 +408,7 @@ options:
   -h, --help            show this help message and exit
   -u URL, --url URL     the url link to imdb, default value $IMDBURL env variable
   -o OUT, --out OUT     the output location on disk where the images will be saved, default value $IMDBFOLDER env variable
-  -s SIZE, --size SIZE  the height size in pxls, with will be calculated respectin the original aspect, default value 400
+  -s SIZE, --size SIZE  the height size in pxls, with will be calculated respectin the original aspect, default value 200
   -l, --list            if enabled provides the list of movies found
   -c, --crop            if enabled crops the width to the min width of the images found
   -d, --deform          if enabled deforms the width to the median width of the images found
@@ -423,7 +423,7 @@ options:
 								</code></pre>
 							</div>
 							<p></p>
-							<p>as previously stated the tool by default will scrape imdb advanced search page for movie titles, search for the posters on duckduckgo, download them and resize them all at the same height. Because of this it requires just two flags to work. The -u (--url) of the page it needs to scrape and the -o (--out) the folder where you want these images to be saved. If you often want to scrape the same page and want the images always in the same place you can also set up two env variables, $IMDBURL and $IMDBFOLDER, this will allow you to skip both flags as the tool will search the env variables if the flags are not provided. To customize the url you can simply click <a href="https://www.imdb.com/search/title/" class="blog_body_link" target="_blank" rel="noopener noreferrer">here</a> and customze the field cast and crew like in the picture here below. After you have specified the person you can also further customize your search with the other fields.
+                            <p>as previously stated the tool by default will scrape imdb advanced search page for movie titles, search for the posters on duckduckgo, download them and resize them all at the same height. Because of this it requires just two flags to work. The -u (--url) of the page it needs to scrape and the -o (--out) the folder where you want these images to be saved. If you often want to scrape the same page and want the images always in the same place you can also set up two env variables, $IMDBURL and $IMDBFOLDER, this will allow you to skip both flags as the tool will search the env variables if the flags are not provided. To customize the url you can simply click <a href="https://www.imdb.com/search/title/" class="blog_body_link" target="_blank" rel="noopener noreferrer">here</a> and customze the field <i>Cast or Crew</i> like in the picture here below. After you have specified the person you can also further customize your search with the other fields.
 							</p>
 							</br>
 							<div class="card border-0 rounded card_txt_background">
@@ -434,8 +434,24 @@ options:
 								<h4 class="card-title card_txt_template">IMDB Advanced Search</h4>
 								</br>
 							</div>
-
-
+                            <p>once you have the link ready and chose the folder to place your downloaded images it's time to run grido.
+                            </p>
+                            <div class="col-12 code_block">
+                                <pre><code class="language-bash">
+# note it's better to wrap the url with quotes
+# swap the url and folder with yours!
+python grido -u "https://www.imdb.com/search/title/?role=nm0000148" -o "~/Downloads"
+                                </code></pre>
+                            </div>
+                            <p><i>flags</i></br>
+alright, we have now all our images, let's then explore a more complex usage of the tool with the help of more flags.
+                            </p>
+                            <p><i>-s | --size</i> :: this flags allows the user to specify the height in pixels to which all images found will be conformed to. If not provided by the user a default the value of 200px will be used. This flag is extremely important when utilized with the grid flag. Every measure is driven by this size, [i]'ll explain a little more later. But what about the width? The tool have a couple of flags to deal with it, but if not specified the width will be derived by the height maintainig the original aspect ration of each image, this means that the tool will conform just the height of all the images found, and the width will be different between them.
+                            </p>
+                            <p><i>-c | --crop</i> :: the crop flag deals exactly with the width problem. [i]'ve decided to include two ways to deal with conforming the width, so the user can choose the one that prefers. The crop flag will crop both left and right side of each image to the minimum width found between all the images. This basically means that crop conforms the width of all the images to the overall min width.
+                            </p>
+                            <p><i>-d | --deform</i> :: the deform flag instead doesn't cut portion of the images, but instead deforms them slightly to achieve the with comformity. One major difference between crop and deform is that instead of using the min width to deform to like crop does, it uses the median min width. This means that the deformation will be less dramatic as both the extremes will be ignored. Hopefully the picture here below will clarity any dout on what this means.
+                            </p>
 						</section>
 					</div>
 
