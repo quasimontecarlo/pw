@@ -274,7 +274,7 @@ a {
     bottom: 0;
 
     /* padding around image */
-    padding: 10rem;
+    padding: 5rem;
 
     /* treanslucent background with db100 as base*/
     background: rgba(46,52,64,0.8);
@@ -293,5 +293,4 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-}
-    
+} 
