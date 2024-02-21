@@ -257,7 +257,7 @@ a {
 }
 .blog_body_link {
 	text-decoration: underline dotted;
-	-webkit-text-decoration-line: underline dotted;
+	::-webkit-text-decoration-line: underline dotted;
 }
 .blog_body_link:hover {
 	color: var(--w40);
@@ -280,6 +280,7 @@ a {
     /* treanslucent background with db100 as base*/
     background: rgba(46,52,64,0.8);
     backdrop-filter: blur(6px);
+	::-webkit-backdrop-filter: blur(6px);
 }
 /* unhide lightbox when targeted */
 .lightbox:target {
