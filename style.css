@@ -257,6 +257,7 @@ a {
 }
 .blog_body_link {
 	text-decoration: underline dotted;
+	-webkit-text-decoration-line: underline dotted;
 }
 .blog_body_link:hover {
 	color: var(--w40);
