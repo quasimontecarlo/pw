@@ -86,7 +86,9 @@ mark {
 /* removing defalt link appearance */
 a {
 	color: var(--db20);
-	text-decoration: none;
+    text-underline-offset: 0.1rem;
+    -webkit-text-decoration: underline dotted;
+/*	text-decoration: none; */
 }
 .navbar-brand {
     color: var(--w60);
@@ -255,9 +257,11 @@ a {
 	font-size: 1rem;
 	color: var(--db60);
 }
+.hidden_link {
+    text-decoration: none;
+}
 .blog_body_link {
 	text-decoration: underline dotted;
-	::-webkit-text-decoration-line: underline dotted;
 }
 .blog_body_link:hover {
 	color: var(--w40);
@@ -280,7 +284,7 @@ a {
     /* treanslucent background with db100 as base*/
     background: rgba(46,52,64,0.8);
     backdrop-filter: blur(6px);
-	::-webkit-backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
 }
 /* unhide lightbox when targeted */
 .lightbox:target {
