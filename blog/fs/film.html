@@ -1,0 +1,332 @@
+<!DOTCTYPE html>
+<html lang="en">
+
+<head>
+	<title>b.log</title>
+	<meta charset="utf-8">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+	<link rel="manifest" href="imgs/site.webmanifest">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- bootstrap CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></script>
+    <!-- linking highlightsjs -->
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/nord.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js" crossorigin="anonymous"></script>
+    <script>hljs.highlightAll();</script>
+    <!-- linking css file -->
+	<link rel="stylesheet" href="/style.css">
+    <meta name="theme-color" content="#2e3440">
+    <!-- Matomo -->
+    <script>
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//crltt.com/analytics/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+</head>
+
+<body>
+	<!-- navbar -->
+	<nav class="navbar navbar-expand fixed-top navbar-dark navbarScroll">
+		<div class="container">
+			<a class="navbar-brand" href="/index.html">>_crltt</a>
+				<div class="navbar-nav ms-auto">
+					<a class="nav-link nav_about" href="/index.html#about">about</a>
+					<a class="nav-link nav_blog active" href="/blog.html#film">b.log</a>
+					<a class="nav-link nav_wrkd pe-0" href="/index.html#wrkd_on">wrkd_on</a>
+                </div>
+		</div>
+	</nav>
+	<section id="blog">
+		<div class="container mt-5 pt-3">
+            
+            <!-- article -->
+            <div class="col">
+                
+                <!-- filmography tool -->
+                </br>
+                <div class="row d-flex">
+                    <section id="film" class="anchor post">
+                        <h1 class="post_title text-truncate">filmography tool</h1>
+                        <div class="row">
+                            <div class="col-8">
+                                <h4 class="tags text-truncate">#sw #python #film</h4>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="tags text-end">@quasi on 10/01/24</h4>
+                            </div>
+                        </div>
+                        <p></p>
+                        <p>a while ago [i] was asked to do a presentation about my professional career, this meant having to prepare a few slides ... and in it a filmography one. The thought of having to search online for all the movie posters, resizing them and create a grid was as boring as the process would have been. That's why I decided to spend twice the amount of time to build this tool [i] am about to explain :).
+                        </p>
+                        </br>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#harrison">
+                                <img class="card-img-top desat" src="/imgs/blog/articles/film/2024_hf_grid.png" loading="lazy" alt="grido grid function example on Harrison Ford">
+                            </a>
+                            <a href="#_" class="lightbox" id="harrison">
+                                <span style="background-image:url('/imgs/blog/articles/film/2024_hf_grid.png')">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="card-body border-0 rounded-0">
+                            <h4 class="card-title card_txt_template">Harrison Ford 50 most popular shows in chronological order</h4>
+                            </br>
+                        </div>
+                        <p><a href="https://github.com/quasimontecarlo/grido" class="blog_body_link" target="_blank" rel="noopener noreferrer"><i>grido</i></a> is a little open source MIT licensed CLI tool with a very simple goal, search download and resize to the same height all the images found off an imdb advanced search page. This was the original goal, and also the current tool default behaviour, but a quick look at the help section will reveal that it is, in fact, way more capable then that. The tool, with a combination of flags, will allow the user to generate a complete grid.png image like shown here above. Now let's start with a guide on how to install it and how to use it.
+                        </p>
+                        <p>if you're using any linux distros or macOs you're in luck as grido is built for unix-like CLIs, [i]'ve personally tested the tool on both platforms and should be working fine. If you're using Windows you might make it work under <a href="https://learn.microsoft.com/en-us/windows/wsl/about" class="blog_body_link" target="_blank" rel="noopener noreferrer">WSL</a> but it is currently untested. Platform aside you only need to know how to open a command line in your system, and install python with your package manager of choice. If these basic prerequisites are satisfied then you can now follow the new steps.
+                        </p>
+                        <p><i>clone</i></br>
+the first step is to clone the repository locally on your computer, this just means you're going to copy the files needed for grido on your computer. After opening the command line choose where you would like to store the tool and cd to that location, the instruction here below will follow what [i] will do, but really it doesn't matter were you decide to place the tool.
+                        </p>
+                        <div class="col-12 code_block">
+                            <pre><code class="language-bash">
+# make a dev directory to store the tool
+mkdir ~/dev
+# enter the directory
+cd dev
+# copy the tool
+git clone https://github.com/quasimontecarlo/grido.git
+# enter the folder
+cd grido
+                            </code></pre>
+                        </div>
+                        <p><i>environment</i></br>
+it's always a good idea to create a container when installing a new tool, this way all its dependencies won't interfere with your system. I generally use virtualenv for which [i] will provide the instructions for, but any other env/container system will work fine.
+                        </p>
+                        <div class="col-12 code_block">
+                        <pre><code class="language-bash">
+# installing virtualenv to handle our environments
+python -m pip install virtualenv
+# creating our grido env 
+python -m virtualenv grido_env
+# activating the env
+source grido_env/bin/activate
+
+### Archlinux ###
+sudo pacman -S python-virtualenv
+virtualenv -p /usr/bin/python3 grido_env
+source grido_env/bin/activate
+                            </code></pre>
+                        </div>
+                        <p><i>requirements</i></br>
+now that we have copied the repo and have set up our environment we can install all the dependencies. [i]'ve set up a simple .txt file to make this as easy as possible.
+                        </p>
+                        <div class="col-12 code_block">
+                            <pre><code class="language-bash">
+# installing dependencies
+python -m pip install -r requirements.txt
+                            </code></pre>
+                        </div>
+                        <p><i>learn</i></br>
+Now that we have satisfied all the requirements we can learn how the tool works. Let's have a look at the help section of grido to start with, then we will discuss them more in depth.
+                        </p>
+                        <div class="col-12 code_block">
+                            <pre><code class="language-bash">
+python grido.py --help
+'''
+usage: grido [-h] [-u URL] [-o OUT] [-s SIZE] [-l] [-c] [-d] [-g] [-gs GRIDSIZE] [-gnl GRIDNEWLINE] [-b] [-ko]
+
+this tools scrapes imdb advanced user search link, scrapes movie titles and year and searches images in duckduckgo, downloads them, and resizes them
+
+options:
+-h, --help            show this help message and exit
+-u URL, --url URL     the url link to imdb, default value $IMDBURL env variable
+-o OUT, --out OUT     the output location on disk where the images will be saved, default value $IMDBFOLDER env variable
+-s SIZE, --size SIZE  the height size in pxls, with will be calculated respectin the original aspect, default value 200
+-l, --list            if enabled provides the list of movies found
+-c, --crop            if enabled crops the width to the min width of the images found
+-d, --deform          if enabled deforms the width to the median width of the images found
+-g, --grid            if enabled creates a new image of a grid with all the images found inside
+-gs GRIDSIZE, --gridSize GRIDSIZE
+                    control the grid image size, default 1920x1080, to make it work please use format $Wx$H
+-gnl GRIDNEWLINE, --gridNewLine GRIDNEWLINE
+                    control when the movie list text goes to a new line, the value indicates after how many items there is a new line?, the value needs to be an integer
+-b, --bypass          if enabled bypass search and goes directly to the folder to resize
+-ko, --keepOriginals  if enabled stores the original images in a subfolder that the script will create
+'''
+                            </code></pre>
+                        </div>
+                        <p></p>
+                        <p>as previously stated the tool by default will scrape imdb advanced search page for movie titles, search for the posters on duckduckgo, download them and resize them all at the same height. Because of this it requires just two flags to work. The -u (--url) of the page it needs to scrape and the -o (--out) the folder where you want these images to be saved. If you often want to scrape the same page and want the images always in the same place you can also set up two env variables, $IMDBURL and $IMDBFOLDER, this will allow you to skip both flags as the tool will search the env variables if the flags are not provided. To customize the url you can simply click <a href="https://www.imdb.com/search/title/" class="blog_body_link" target="_blank" rel="noopener noreferrer">here</a> and customize the field <i>Cast or Crew</i> like in the picture here below. After you have specified the person you can also further customize your search with the other fields.
+                        </p>
+                        </br>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="https://www.imdb.com/search/title/" target="_blank" rel="noopener noreferrer">
+                                <img class="card-img-top desat" src="/imgs/blog/articles/film/imdb_as.png" loading="lazy" alt="imdb advanced search website screenshot">
+                            </a>
+                        </div>
+                        <div class="card-body border-0 rounded-0">
+                            <h4 class="card-title card_txt_template">IMDB Advanced Search</h4>
+                            </br>
+                        </div>
+                        <p>once you have the link ready and chose the folder to place your downloaded images it's time to run grido.
+                        </p>
+                        <div class="col-12 code_block">
+                            <pre><code class="language-bash">
+# note it's better to wrap the url with quotes
+# swap the url and folder with yours!
+python grido -u "https://www.imdb.com/search/title/?role=nm0000148" -o "~/Downloads"
+                            </code></pre>
+                        </div>
+                        <p><i>flags</i></br>
+alright, we have now all our images, let's then explore a more complex usage of the tool with the help of more flags.
+                        </p>
+                        <p><i>-s | --size</i> :: this flags allows the user to specify the height in pixels to which all images found will be conformed to. If not provided by the user a default the value of 200px will be used. This flag is extremely important when utilized with the grid flag. Every measure is driven by this size, [i]'ll explain a little more later. But what about the width? The tool have a couple of flags to deal with it, but if not specified the width will be derived by the height and maintain the original aspect ratio of each image, this means that the tool will conform just the height of all the images found, and the width will be different between them.
+                        </p>
+                        <p><i>-c | --crop</i> :: the crop flag deals exactly with the width problem. [i]'ve decided to include two ways to deal with conforming the width, so the user can choose the one that prefers. The crop flag will crop both left and right side of each image to the <b>minimum width</b> found between all the images. This basically means that crop conforms the width of all the images to the overall min width.
+                        </p>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#crop">
+                                <img class="card-img-top desat" src="/imgs/blog/articles/film/crop_V01.png" loading="lazy" alt="crop strategy graph">
+                            </a>
+                            <a href="#_" class="lightbox" id="crop">
+                                <span style="background-image:url('/imgs/blog/articles/film/crop_V01.png')">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="card-body border-0 rounded-0">
+                            <h4 class="card-title card_txt_template">left strategy | right result</h4>
+                            </br>
+                        </div>
+                        <p><i>-d | --deform</i> :: the deform flag instead doesn't cut portion of the images, but instead deforms them slightly to achieve the with conformity. One major difference between crop and deform is that instead of using the min width to deform to like crop does, it uses the <b>median min width</b>. This means that the deformation will be less dramatic as both the extremes will be ignored. Hopefully the picture here below will clarity any doubt on what this means.
+                        </p>
+                        </br>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#deform">
+                                <img class="card-img-top desat" src="/imgs/blog/articles/film/deform_V01.png" loading="lazy" alt="deform strategy graph">
+                            </a>
+                            <a href="#_" class="lightbox" id="deform">
+                                <span style="background-image:url('/imgs/blog/articles/film/deform_V01.png')">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="card-body border-0 rounded-0">
+                            <h4 class="card-title card_txt_template">left strategy | right result</h4>
+                            </br>
+                        </div>
+                        <p><i>-g | --grid</i> :: once you choose how to conform the width of the images you will be able to use the grid flag. If your goal is to get the grid.png output you must have conformed your images with either method, this is because the grid works needs perfectly conformed images to be able to output a perfect grid. The grid flag is a boolean, it just activates the option but doesn't provide control over the grid. To control it there are several flags but mostly you can play with the size flag depending on how many items there are in your grid. As a tip [i] suggest you to set the size to 200 for roughly 25 items. For 50+ items [i]'ve found that values between 100-150 work well. Higher numbers are suggested for 15 or less items. Bare in mind that the grid will stop displaying items if you're asking for more items that can be fit in the grid, so don't be afraid and play around with the size flag to find your desired result.</br>The grid will also include a title, it will order the items found chronologically and write a list with names and dates at the bottom. To achieve this [i] am using a font included in the font folder. [i] do not hold any rights over this font and was found online <a href="https://www.1001fonts.com/alte-din-1451-mittelschrift-font.html" class="blog_body_link" target="_blank" rel="noopener noreferrer">here</a>.
+                        </p>
+                        <p><i>-gs | --gridSize</i> :: the grid size flag controls the height and width of the grid.png allowing the user to customize to specific resolutions. If not invoked it will use a default value of 1920x1080. This flag can be used in conjunction with size to avoid shrinking the items found size and allow for more of them to fit by using a larger final resolution. The only requirements for the flag to work is for the values to be entered with this format <i>$WIDTHx$HEIGHT</i> like shown here above with the default value.
+                        </p>
+                        <p><i>-gnl | --gridNewLine</i> :: the grid new line flag controls the amount of words before a new line break for the text at the bottom of the grid. [i]'ve decided to build this control in to leave the user a little bit of creative typographic direction over the final grid file. At times this flag can result useful, especially when dealing with either very few or tons of items and very long titles. Use is as you please and please remember to input only integer values. The default value if not invoked is 7, generally values around that number will work best.
+                        </p>
+                        <p><i>-b | --bypass</i> :: the bypass function is a funny one as it was mainly build for me to speed up the testing process of the grid/conform flags but then opened up a door for new workflows which made it a must keep when compiling the list of flags. The idea of it is to bypass the scrape/search/download portion of the script and just act on a folder of images. Basically you will want to use this flag if you've already downloaded all the images but want to conform them further, or want a different look for the grid. This flag will also come very handy to fix some of the images the tool might find. Since it is a completely automated workflow it could happen that the user might not like a specific poster that the tool found and grid. By using the bypass flag the user will be able to substitute the unwanted image with any other one of their choice. If you will rename the swapped image like the one you're swapping from the tool will also keep the naming convention and be able to place it chronologically. In short, the bypass flag is extremely useful to have some manual input in the grid creation, but could also be used to conform a total random number of images in a folder for a completely different scope.
+                        </p>
+                        <p><i>-l | --list</i> :: the list flag simply prints out in the command line a list of all the items found when scraping the url provided. It is a very quick way to get a list of movies for whatever scope, [i] use it all the time to very quickly answer the questions: "How many movies have you worked on?" | "Can you tell me which movies have you worked on?". Quite handy to have.
+                        </p>
+                        <p><i>-ko | --keepOriginals</i> :: the keep originals flag simply creates a subfolder in the location provided where it will store all the original images found without any conformation. This is super useful in case you're playing around with the size flag and resize everything a little too small. If you keep the originals you could simply copy those back in the main folder and run the tool with the bypass flag to keep testing without having to scrape again. Very useful flag that [i] always leave on, even if [i] end up not needing the original files, having them there will speed up the process in case of problems.
+                        </p>
+                        </br>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#audrey">
+                                <img class="card-img-top desat" src="/imgs/blog/articles/film/2024_ah_grid.png" loading="lazy" alt="grido grid function example on Harrison Ford">
+                            </a>
+                            <a href="#_" class="lightbox" id="audrey">
+                                <span style="background-image:url('/imgs/blog/articles/film/2024_ah_grid.png')">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="card-body border-0 rounded-0">
+                            <h4 class="card-title card_txt_template">Audrey Hepburn movies with IMDB score higher then 7.5 in chronological order</h4>
+                            </br>
+                        </div>
+                        <p><i>examples</i></br>
+To conclude [i]'d like to show a couple of examples to help with the flags usage, here below you can find the prompt [i]'ve used to generate the Harrison Ford image you can find at the beginning of this article and the Audrey Hepburn grid here above. Using these two examples as a base you can customize them with your url and folder and achieve your perfect grid. For any problem using the tool please open a github issue.
+                        </p>
+                        <div class="col-12 code_block">
+                            <pre><code class="language-bash">
+## Harrison ##
+# because of the 50 elements the size flag is reduced
+python grido -s 100 -d -g -u "https://www.imdb.com/search/title/?role=nm0000148" -o "~/Downloads"
+## Audrey ##
+# notice how the size flag is bigger here as we only have 14 items to grid
+python grido -s 250 -d -g -u "https://www.imdb.com/search/title/?role=nm0000030&title_type=feature&user_rating=7.6," -o "~/Downloads"
+
+# as you can see both images used the deform method
+                            </code></pre>
+                        </div>
+                        <p><em>o u t</em></p>
+                    </section>
+                </div>
+            </div>
+    
+        </div>
+	</section>
+	</br>
+    </br>
+    
+    <!-- footer section -->
+    <footer id="footer">
+		<div class="container">
+
+			<div class="row">
+				<div class="col">
+					<p class="break_line text-center text-truncate footer_text">------------------------------------------------------------------------------------------------</p>
+				</div>
+			</div>
+			</br>
+			<div class="row g-0 text-start">
+        		<div class="col-5">
+					<img id="logo_button" class="svg_logo" src="/imgs/logo/lg02_V01.svg" alt="crltt logo">
+					&nbsp;
+           		</div>
+
+				<div class="col-2 text-center">
+                	<p class="footer_text">--[?!]--</p>
+            	</div>
+
+				<!-- socials -->
+				<div class="col-5 text-end socials-icons">
+    	        	<a class="hidden_link" href="https://www.imdb.com/name/nm7053849/" target="_blank" rel="noopener noreferrer">
+                	<svg class="icon" height="3rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 125 448 512">
+                	<path d="M 46.525579,344.00135 H 0 V 164.28207 h 46.525579 z m 87.112841,-95.61484 11.9028,-84.10444 h 60.56043 V 344.00135 H 165.55363 V 222.74969 L 148.02642,344.00135 H 120.16601 L 103.162,225.36569 103.0312,344.00135 H 62.221586 V 164.28207 h 60.298824 c 0.654,10.85641 3.6624,23.67481 5.6244,38.45522 z m 88.42083,95.61484 V 164.28207 h 34.79281 c 22.23602,0 35.31603,1.1772 43.16403,3.1392 7.9788,2.2236 13.9956,5.4936 18.18121,10.3332 4.05479,4.31641 6.6708,8.63281 7.5864,15.69601 1.1772,5.7552 1.8312,17.13481 1.8312,34.26961 v 63.04563 c 0,16.08841 -0.9156,26.81401 -2.4852,32.30762 -1.4388,5.3628 -4.05481,9.6792 -7.84801,12.6876 -3.6624,3.1392 -8.3712,5.3628 -13.9956,6.54001 -5.4936,1.04639 -13.86481,1.7004 -24.98281,1.7004 z m 46.43403,-148.98127 v 116.93525 c 6.67079,0 10.85639,-1.308 12.2952,-3.0084 1.4388,-2.61601 2.3544,-9.9408 2.3544,-21.84362 v -69.71642 c 0,-8.1096 -0.1308,-13.34161 -0.9156,-15.69601 -0.3924,-2.3544 -1.5696,-3.924 -3.4008,-6.14759 -1.83121,0 -5.3628,-0.52321 -10.3332,-0.52321 z m 74.94843,148.98127 V 164.28207 h 44.60281 v 57.42122 c 3.79321,-3.1392 7.97881,-6.4092 12.42601,-8.6328 4.7088,-1.962 11.5104,-3.1392 16.74241,-3.1392 6.2784,0 11.6412,1.0464 16.0884,2.8776 4.44721,1.962 7.84801,4.578 10.464,8.1096 2.22361,3.40081 3.53161,6.93241 4.05481,10.20241 0.5232,3.4008 -0.2616,10.464 -0.2616,21.1896 v 50.48883 c 0,10.7256 0.2616,18.70441 -1.0464,24.06721 -1.4388,5.232 -4.9704,9.9408 -10.20241,12.5568 -5.3628,5.1012 -11.6412,6.93241 -19.0968,6.93241 -5.23201,0 -12.03361,-1.1772 -16.61161,-3.27 -4.578,-2.3544 -8.7636,-5.886 -12.55681,-10.46401 l -2.7468,11.37961 z m 58.99082,-27.07562 c 0.9156,-2.3544 1.308,-7.848 1.308,-16.35 v -46.30322 c 0,-7.32481 -0.3924,-12.42601 -1.4388,-14.64961 -0.9156,-2.4852 -4.8396,-3.53161 -7.5864,-3.53161 -2.616,0 -4.4472,1.04641 -5.3628,3.0084 -0.78481,1.96201 -1.30801,7.06321 -1.30801,15.17282 v 47.61121 c 0,7.97881 0.5232,13.08002 1.56961,15.17282 0.78479,2.22359 2.7468,3.27 5.3628,3.27 2.8776,0 5.4936,-1.04641 7.4556,-3.40081 z"/>
+                	</svg>
+                	</a>
+					&nbsp;
+
+                	<a class="hidden_link" href="https://www.linkedin.com/in/crltt" target="_blank" rel="noopener noreferrer">
+                	<svg class="icon icon_trans" height="1.5rem" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+                	<path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+                	</svg>
+                	</a>
+					&nbsp;
+
+                	<a class="hidden_link" href="https://github.com/quasimontecarlo" target="_blank" rel="noopener noreferrer">
+                	<svg class="icon icon_trans" height="1.5rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512">
+                	<path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/>
+                	</svg>
+                	</a>
+					&nbsp;
+
+					<a class="hidden_link" ref="mailto: info@crltt.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-at"></i>
+                	<svg class="icon icon_trans" height="1.5rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                	<path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
+                 	</svg>
+                 	</a>
+				</div>
+	    	</div>
+    	</div>
+        </br>
+	</footer>
+
+	<!-- load javascript after loading all html content -->
+	<script src="/script/script.js"></script>
+
+	<body>
+</html>
