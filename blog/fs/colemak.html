@@ -1,0 +1,395 @@
+<!DOTCTYPE html>
+<html lang="en">
+
+<head>
+	<title>b.log</title>
+	<meta charset="utf-8">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+	<link rel="manifest" href="imgs/site.webmanifest">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- bootstrap CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"></script>
+    <!-- linking highlightsjs -->
+    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/nord.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js" crossorigin="anonymous"></script>
+    <script>hljs.highlightAll();</script>
+    <!-- linking css file -->
+	<link rel="stylesheet" href="/style.css">
+    <meta name="theme-color" content="#2e3440">
+    <!-- Matomo -->
+    <script>
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//crltt.com/analytics/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+</head>
+
+<body>
+	<!-- navbar -->
+	<nav class="navbar navbar-expand fixed-top navbar-dark navbarScroll">
+		<div class="container">
+			<a class="navbar-brand" href="/index.html">>_crltt</a>
+				<div class="navbar-nav ms-auto">
+					<a class="nav-link nav_about" href="/index.html#about">about</a>
+					<a class="nav-link nav_blog active" href="/blog.html#key">b.log</a>
+					<a class="nav-link nav_wrkd pe-0" href="/index.html#wrkd_on">wrkd_on</a>
+                </div>
+		</div>
+	</nav>
+	<section id="blog">
+		<div class="container mt-5 pt-3">
+            
+            <!-- article -->
+            <div class="col">
+                
+                <!-- qwerty to cloemak -->
+                </br>
+                <div class="row d-flex">
+                    <section id="key" class="anchor post">
+                        <h1 class="post_title text-truncate">qwerty --> colemak-dh</h1>
+                        <div class="row">
+                            <div class="col-8">
+                                 <h4 class="tags text-truncate">#sw #hw #solder #keyboard #zmk #splitkb #ergo</h4>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="tags text-end">@timmin on 21/02/24</h4>
+                            </div>
+                        </div>
+                        <p></p>
+                        <p>not long ago my neck stiffness and back-shoulder pain was getting incredibly severe, this, on top of the already growing wrist pain [i] was experiencing, forced me into looking closely at my workplace ergonomics. It didn't took long to find the major cause of this distress, my bad posture mostly due to my keyboard. If it isn't clear enough, what [i] am about to write is <b>my journey through keyboard ergonomics, from inception, to research, to switching and finally present days.</b> The hope is to give the reader a light to follow, as switching your keyboard layout can be quite a daunting process.
+                        </p>
+                        </br>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#choco">
+                                <img class="card-img-top" src="/imgs/blog/articles/colemak/chocofi_illustration_V01.png" loading="lazy" alt="chocofi keyboard illusstration">
+                            </a>
+                            <a href="#_" class="lightbox" id="choco">
+                                <span style="background-image:url('/imgs/blog/articles/colemak/chocofi_illustration_V01.png')">
+                                </span>
+                            </a>
+                        </div>
+                        </br>
+                        <p><i>research</i></br>
+it is fair to say that, before entering the process, [i] already had quite an interest on keyboards. As you soon will discover, [i] tend to use the keyboard for most of my computer needs. [i] hate having to move my hands between it and the mouse, [i] generally tend to use the terminal quite extensively as [i] hate the modern input methods found on current generation operating systems. [i] think clicking around in your GUI to find a file it's extremely inefficient for most scopes and for that reason [i] tend to use the keyboard quite a lot. ( P.S. :: [i] will expand on this subject in a future article about my arch linux build ). Because of this, even before the whole ergonomic keyboard journey started [i] was familiar with building classic MX mechanical keyboards as since it's my favourite input method, [i] seek a more satisfactory item to use. Unfortunately those choices just made the issue more severe and that's when [i] started researching deeply workspace ergonomics. This intro was just to point out that going into this process [i] already had assembled my own custom mechanical keyboard, no soldering, but [i] was already familiar with components and process, albeit on a very superficial way. My research then didn't touch any of these aspects, [i] already knew roughly how keyboards works and are made, it is probably worth, if you, the reader, are planning to switch, to research a little how classic mechanical keyboard works.</br>
+                        That said, after reading numerous ergonomics articles i was convinced that, for the most part, my bad posture was caused by the keyboard. When using a 100% classic keyboard, the resting position forces the user to have the hands close to each other. This tends to make the user close up their shoulder blade and with time arching like a goblin sucked in by the screen. [i]'ve seen countless of images showing you how to assume a correct posture, but with classic setups, [i] believe, it's simply unachievable. Of course if you pay attention to your posture every second you might be able to achieve it, but who does that?!, soon enough the work you're performing will distract you and you will end up glued to the screen. [i] believe that to be able to keep a good posture we need to start from a setup that effortlessly allows us to maintain it without having to think about it and the keyboard, alongside monitor height, are the most important aspects of the setup.
+                        </p>
+                        </br>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#fullsplit">
+                                <img class="card-img-top" src="/imgs/blog/articles/colemak/fullVSsplit_V01.png" loading="lazy" alt="illustration to showcase benefit of splitting the keyboard">
+                            </a>
+                            <a href="#_" class="lightbox" id="fullsplit">
+                                <span style="background-image:url('/imgs/blog/articles/colemak/fullVSsplit_V01.png')">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="card-body border-0 rounded-0">
+                            <h4 class="card-title card_txt_template">benefit of a split keyboard</h4>
+                            </br>
+                        </div>
+                        <p>What [i]'ve found out with my research is that <b>splitting your keyboard in half is what, most of all, helps with a better posture.</b> It is, [i] believe, the easiest and most effective change to your setup you can do. Being able to spread the hands apart helps shoulders strain by keeping them open and avoid leaning forward, it does, naturally, help with your posture, without even trying, without having to think about it. Your wrists will also thank you as splitting your keyboard greatly helps avoiding <b>Ulnar deviation</b>. Not all roses though, using a split keyboard poses some challenges, most notably one, touch typing. It is necessary that you're capable of touch typing properly and if you are like [i] was, it won't be easy. [i] have to admit, until then, [i] couldn't properly touch type, [i] was capable of what [i] would call, shit type. That means that [i] didn't need to look at the keyboard when typing and [i] was quite typing at a decent speed, but [i] did pick that up through random usage, not meticulous training. This, in practice, means that i wasn't clicking the correct keys with the correct fingers, my typing was erratic, and filled with hands movements. Let's say [i] was mostly using two-three fingers, and moving my hands a lot to cover all letters, symbols and macros. Given these conditions, "breaking" my keyboard in half wasn't as easy as [i] first thought, it would involved learning to touch type properly as well.</br>
+The second biggest contributing factor is <b>tenting the two halves outwards to help with pronation and avoid wrist extension.</b> This is because when your hands are parallel to the typing surface two bones in your forearms, the ulna and the radius, rotates increasing pressure on your muscles and reducing circulation. This can cause strain and fatigue as you're not using a neutral pose, you're actually twisting your arms when you type all day. Try to drop your arms alongside your body, you'll quickly discover how more comfortable your resting position is compared to twisting your arms to have your palms looking backwards. By tilting your split keyboard, more and more perpendicular to the table you can alleviate the stress to your wrist and easily help with the wrist pain you might be experiencing. A good article about the subject can be found on the <a href="https://kinesis-ergo.com/healthy-gaming/" class="blog_body_link" target="_blank" rel="noopener noreferrer">Kinesis</a> website and [i] believe it's worth a read if you're interested.</br>
+                        </p>
+                        </br>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#pronation">
+                                <img class="card-img-top" src="/imgs/blog/articles/colemak/pronation_V01.png" loading="lazy" alt="illustration to showcase the benefit of a tented split keyboard">
+                            </a>
+                            <a href="#_" class="lightbox" id="pronation">
+                                <span style="background-image:url('/imgs/blog/articles/colemak/pronation_V01.png')">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="card-body border-0 rounded-0">
+                            <h4 class="card-title card_txt_template">benefit of a tented split keyboard</h4>
+                            </br>
+                        </div>
+                        <p>If you're searching for easy and quick typing pain relief these two solution could suffice, especially if you're a touch typer already, but [i] wasn't. That's why, my shift didn't stop there. Since [i] needed to learn how to touch type properly, [i] thought it would be worth exploring if learning to touch type the QWERTY layout was what [i] was looking out for. [i] did, before then, read a few articles on how <b>QWERTY is outdated and inefficient in our digital age.</b> Being designed in the late 19th century for typewriter usage is simply very inefficient when you can use all your fingers to type with. Since then a plentitude of other keyboard layouts were designed but for the better or for the worse QWERTY stuck in our society and it's simply too widespread for other layouts to even be considered as an alternative. [i], on the other hand, was faced with the decision of learning to touch-type with the old, inefficient but widespread layout that [i] was already accustomed to, or to pick a new layout and change that as well. "In for a penny" [i] thought and proceeded into learning all the various different layouts that were designed for different reasons. [i], of course, was puzzled, there are many good options for many different scopes then, after all, the original goal that lead me down this path guided this too, typing comfort. [i] decided to settle on Colemak, mostly cause it was designed with ergonomics in mind and ease of switch from QWERTY. But [i] didn't stop there, there's a niece recent version of Colemak that is designed with split keyboard in mind and involves a slight differences from the original layout, that's why [i] settled in learning the Colemak-DH layout.</br>
+                        Now, you might possibly ask, what else? what else could there be to research for keyboards improvements. Well, remember when [i] mentioned [i] hated having to move my hands to use the mouse? Well, it turns out that my hatred is way more severe than that :). Silliness aside, on my research [i] read a lot about fingers, home-row placements and [i] did realise that having to move your hands and lose your resting position with the occasional mistyped character couldn't just be solved by changing keyboard layout. Of course Colemak tries to avoid hands movement as much as it can, but, after all, we're just talking about alphabet letters placements. There's way more to a keyboard, punctuation, numbers, function rows, macro and special keys. What [i]'ve quickly found out is that what [i] was looking for was less keys, in pure "less is more" [i] simply needed to remove as many keys as a possibly could, to be able to use my keyboard without having to ever move my hands, but just moving my fingers. This is quite subjective and there's a world to explore here in the custom split keyboard community, so it's difficult to recommend a good size, it really depends on preference, [i] suggest you to have a read, and maybe have a look at this wonderful resource on github by <a href="https://github.com/diimdeep/awesome-split-keyboards" class="blog_body_link" target="_blank" rel="noopener noreferrer">diimdeep</a>. Now you might ask? so where are these keys going? Well, [i] will surely touch more on this later when [i] will run you through my keyboard setup, but for now, removing physical keys doesn't mean losing functionality, in most cases it actually means gaining more functionality. <b>Generally these keys will be either moved to the thumbs,</b> completely underutilised in classic keyboards and mostly moved to software. With the help of <b>tap behaviours, macros, function keys and layers you will be able to have as many keys as you can possibly imagine,</b> even more, you could actually design the behaviour or keys combination that a specific action or key will trigger. Like said, less is more.</br>
+                        </p>
+                           </br>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#def">
+                                <img class="card-img-top" src="/imgs/blog/articles/colemak/def_clean_V01.png" loading="lazy" alt="default layer of my keyboard drawn with keyboard drawer">
+                            </a>
+                            <a href="#_" class="lightbox" id="def">
+                                <span style="background-image:url('/imgs/blog/articles/colemak/def_clean_V01.png')">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="card-body border-0 rounded-0">
+                            <h4 class="card-title card_txt_template">my current keyboard default layer</h4>
+                            </br>
+                        </div>
+                        <p><i>choice</i></br>
+[i] could go on forever on writing about the research that went through choosing the right keyboard for my needs and really, eventually you'll have to jump into the unknown and make a choice, as there's no real way to know without trying it first hand. So let's then explore my setup, and why this ended up being my choice. [i] spent numerous hours looking at different split keyboards and evaluating every possible aspect. Eventually [i]'ve settled on a few cornerstones:
+                        </p>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>portable___</p>
+                            </div>
+                            <div class="px-0">
+                                <p>since this keyboard will completely shift may way of typing [i] want to be able to carry it around from home to office on a daily basis, because of this, it needs to be small and lightweight.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>bluetooth__</p>
+                            </div>
+                            <div class="px-0">
+                                <p>[i] tend to use multiple systems at the same time, for this reason [i] didn't want to plug/unplug cables every time [i] need to control different computers, bluetooth will offer me a convenient way to switch between different systems effortlessly. Of course this introduces a little bit of lag, but [i] am not too bothered with it and can deal with it for the greater flexibility gain.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>lowkey____</p>
+                            </div>
+                            <div class="px-0">
+                                <p>[i]'ve settled on 34 to 36 keys, this seemed to be the sweet spot for me, there a quite a few choices of split keyboards that support this amount of keys and gives me a good balance. I can fit all the English alphabet in the main layer whilst being relatively compact.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>chocolate_</p>
+                            </div>
+                            <div class="px-0">
+                                <p>choc switches instead of MX ones, chocs are low profile and tend to be more comfortable to type with because of their reduce height, which helps them being compact too. Unfortunately there is not as much choice as with MX ones, and there's still some debate on standards, but overall there's still quite a decent community and new products are being developed day by day.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>screentime</p>
+                            </div>
+                            <div class="px-0">
+                                <p>this last point was sort of optional, or a plus. Having little screens on each half surely helps a little. You can have a more precise battery indicator, which bluetooth profile you're connected to and which layer is active at any particular time. That said now with some usage [i] generally tend to never look at them. So if you're tight on money you can surely skip them. That said, they surely make your keyboard look cool :).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>open_____</p>
+                            </div>
+                            <div class="px-0">
+                                <p>[i] am growing tired of this world where proprietary products get eventually discontinued by companies and inevitably the users end up loosing what they have paid for. For this reason [i] tend to always look out for fully open-source and open-hardware products. This, not only gives me full true ownership of what [i] buy, it also gives me a chance to iterate over the product with possible changes that [i] might have.
+                                </p>
+                            </div>
+                        </div>
+                        <p>all this considered i was then puzzled between 3 quite similar keyboards, the <a href="https://github.com/davidphilipbarr/Sweep" class="blog_body_link" target="_blank" rel="noopener noreferrer">sweep</a>, the <a href="https://github.com/foostan/crkbd" class="blog_body_link" target="_blank" rel="noopener noreferrer">corne</a> and finally what ultimately ended up being my choice, the <a href="https://github.com/pashutk/chocofi" class="blog_body_link" target="_blank" rel="noopener noreferrer">chocofi</a>. What [i]'ve linked here are the urls of the original projects, as you will see they don't include all of the requirements, but dig around a little and you'll find that all of them satisfy all my requirements in some fork of the original repo. This is the beauty of it too, since they're all open source, the community is improving on the original design. What ultimately made me choose the chocofi was mostly the pinky stagger, which means the column of keys that need to be controlled by the pinky are heavily lowered. Again this was just a hunch, [i] didn't know, still don't, if a less aggressive stagger would suit me best, but all [i] can say is that [i] believe this is the right choice for the type of hand orientation [i] want and fingers [i] have.</br>
+There are a few other things to bare in mind before [i] then go ahead and talk about the software side of things;</br>
+<i>deciding to go for an open source project does, of course, come with some technical aspects you need to be aware of, you need to know what you're going into and that the journey might require you to leave your comfort zone and learn something new.</i> If what you're looking for is a ready-made system than [i] would suggest going with some proprietary products. Furthermore, at the time of writing, deciding to go bluetooth also comes with a fair bit of technical learning curve to master. If you're willing to learn, or have experience with github workflows then it's surely not a big issue, but if you don't then you need to take this into account. This is because split bluetooth connectivity isn't yet supported in <a href="https://qmk.fm/" class="blog_body_link" target="_blank" rel="noopener noreferrer">QMK</a> which is the more fully fledge wide-spread keyboard firmware most gaming keyboards come with. QMK will allow you to use many different web interfaces to customise your keyboard which make things quite a bit easier and it also have more features as it's a more mature project. If you're dead set on having a bluetooth split keyboard then your only choice is to use <a href="https://zmk.dev/" class="blog_body_link" target="_blank" rel="noopener noreferrer">ZMK</a> and you need to be comfortable using github and customising your keyboard by changing things via a text file. But let's not get intimidated by it, [i] assure you the learning curve is absolutely worth it.  
+                        </p>
+                        </br>
+                        <p><i>software</i></br>
+In this subchapter [i] will walk you through the configuration of my keyboard, the goal is to show you how much more powerful your typing experience could be and how reducing the numbers of keys can result in having more functionality, rather then less. To begin with, as said previously, because of my choices [i] am using zmk as my keyboard firmware, so everything [i] will explain from now on is based on it. Said that most of the features covered are available in qmk as well so please keep that in mind. Before we start to list the features [i] am currently using [i] would like to acknowledge that my setup is derived heavily by <a href="https://github.com/caksoylar" class="blog_body_link" target="_blank" rel="noopener noreferrer">caksoylar</a>, when [i] first looked for a place to start to customise my keyboard [i] was a little lost over the many options, until [i] stumbled upon his setup. We messaged a few times and [i] have to say he was super helpful and helped me a great deal. All that my setup is, to be honest, is a fork of his work with modifications for my taste or keyboard needs. Even the keyboard layout images you see in this article are done with a beautiful tool he build, <a href="https://github.com/caksoylar/keymap-drawer" class="blog_body_link" target="_blank" rel="noopener noreferrer">keymap-drawer</a>, so thank you Cem for your great work.
+                        </p>
+                        </br>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#layers">
+                                <img class="card-img-top" src="/imgs/blog/articles/colemak/layers_V01.png" loading="lazy" alt="understanding layers drawing">
+                            </a>
+                            <a href="#_" class="lightbox" id="layers">
+                                <span style="background-image:url('/imgs/blog/articles/colemak/layers_V01.png')">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="card-body border-0 rounded-0">
+                            <h4 class="card-title card_txt_template">multiple keyboards within one: layers</h4>
+                            </br>
+                        </div>
+                        <p>The best place to start and delve into the complexity of this world is, of course, the zmk <a href="https://zmk.dev/docs" class="blog_body_link" target="_blank" rel="noopener noreferrer">documentation</a>. In the <a href="https://zmk.dev/docs/behaviors" class="blog_body_link" target="_blank" rel="noopener noreferrer">behaviours</a> section you will find an in depth technical documentation of everything [i] will discuss here and how to implement it in your keyboard layout. What [i] am going to focus to, instead, is a more high level simplistic explanation of each feature [i] am using alongside the reasoning why [i] did choose to use it. It's important to highlight, before we begin, that your keyboard setup is yours and yours only, meaning that you can surely start from a pre-built base, like [i] did, but then you will need to keep changing the setup to your taste. [i] have modified my configuration countless times. Nowadays it's pretty stable but sometimes [i] still find fighting some decision [i] made a while back, then [i] jump back in and fix it in for good. You will spend quite some time customising your keys layout, experiment and change things. Initially it won't be easy especially if you, like me, are trying to learn a new keyboard layout, so for instance, what [i] did was settle on the letter placement following the colemak-dh convention and just learned those first. Then I started to learn punctuations, numbers and so on, that's when the customisation side shines.
+                        </br>
+                    The first, and probably most important, behaviour you need to familiarise yourself with, sketched in the little image here above, is <b>layers</b>. Then [i] will cover other features that can greatly expand the capabilities of your keyboard. Bare in mind that [i] am not going to cover all of the zmk features in this article, [i] strongly suggest you to have a deep look at the behaviours section of zmk' documentation if you are seeking a complete list and want to know how to implement them. My goal is to give you a simple and quick overview of what [i] find the most useful features to help the reader have a picture of the full potential achievable with this kind of setup. If you want to see the my zmk config, where i set up most of this features, you can find it right <a href="https://github.com/quasimontecarlo/zmk-config/blob/master/config/3x5.dtsi" class="blog_body_link" target"_blank" rel="noopener noreferrer">here</a>.
+                        </p>
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#symbol">
+                                <img class="card-img-top" src="/imgs/blog/articles/colemak/sym_clean_V01.png" loading="lazy" alt="my symbol layer">
+                            </a>
+                            <a href="#_" class="lightbox" id="symbol">
+                                <span style="background-image:url('/imgs/blog/articles/colemak/sym_clean_V01.png')">
+                                </span>
+                            </a>
+                        </div>
+                        </br>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>layers______</p>
+                            </div>
+                            <div class="px-0">
+                                <p>To better explain layers let's first start to define some basic concepts. In a standard keyboard each key press will trigger the value written on the key itself. This behaviour, in zmk, is called <i>kp</i> or keypress. On some laptop keyboards you might find a <i>fn</i> button, this is called a function button. The idea of this button is to enable, for some specific keys, an alternative value. Generally this is used to give the laptop users a button to change the brightness on their screens, or the volume and so on. To enable this alternative value the user generally needs to press the key whilst holding the function button. This behaviour in zmk is called hold-tap and we will expand on it shortly after. Now, let's think about this special behaviour but let's expand on it a bit further. What if, instead of having just a set of keys, we could have a button that just changes every value in our keyboard? This idea allows us to create different sets of keyboards, by mapping different values to the same key layout and access them by holding a specific special key. As you can see in the image here above, when the button coluored in pink is held we can access a layer called <i>symbol</i>. [i] have defined this layer to hold all the various symbols and numbers [i] would need, allowing me to have at my disposal a full sized number pad when one of my layer key is held. If you scroll up a little you will find my default layer, that layer holds all the letters and some of the most used punctuation, the symbol one allows me to access the full sets of symbols and numbers, furthermore [i] have a <i>navigation</i> layer, which holds values that [i] find useful when navigating my computer with my keyboard and finally [i] have a <i>function</i> layer which gives me access to all function keys and some utilities needed when using my bluetooth keyboard. Generally [i] tend to mostly use default and symbol layer while typing, the navigation layer to move around my device and occasionally the function one. Learning and remembering the layouts is the key of the game really, building that muscle memory that will allow you to efficiently use your creation, [i] will expand on my experience with some tips on how to learn your newly created setups later on. This is, in short what layers are, if you look at my little scribble above, it pictures a specific key with its value written on it. Next to it and colour coded, are the layers. You can see how in <i>def</i>ault layer the key holds the value <i>Q</i>, when <i>sym</i>bol is active the same key holds the number <i>2</i> and so on. As a final clarification, in this brief explanation [i]'ve used the hold-tab behaviour ( layer-tap to be precise ) to explain how [i] activate layers, that said there are other ways to activate layers and trigger this behaviour, <b>layers are just different value mapped to a specific set of keys</b>, how to activate them is up to the user.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>holdtap____</p>
+                            </div>
+                            <div class="px-0">
+                                <p>[i]'ve briefly touched on hold-tap earlier by comparing it to how the <i>fn</i> button works in laptop. To be extremely precise that behaviour is more correctly called mod-tap or layer-tap, but it's all in all a derivative from the hold-tap behaviour. So then, what is this hold-tap? Well the substance with what [i]'ve explained earlier is sort of similar, hold-tap allows you to trigger alternative values based on some other action, but it appropriately refers to single key behaviour. To explain it simply, we assign to the key a hold and a tap value. Meaning <b>the key will trigger a different value depending if it's been tapped quickly or if it has been held for a specific period of time.</b> Thanks to this behaviour [i] can set up what is known as <i>home-row-mod</i>. This setup is probably, with layers, one of the most useful features of setting up your complex keyboard behaviour. Home-row-mod mens literally adding the modifier keys ( ctrl, alt, shift ... ) in the home row of your keyboard. The home row is the resting position of your keyboard. The keys that your hands rest on when you're not typing. This allows for huge ergonomic benefits as generally these keys are relegated to the edges and are used constantly making the user move their hands frequently. By adding adding the modifier keys as hold in your home row you can heavily reduce the need to move your hands whilst typing. If you look in the image of my symbol layer, you can see that on the central keys of my keyboard on both left and right half there are some keys that have two values written, one at the centre of the key, the <i>tap</i> value, and one at the bottom, the <i>hold</i> one. That means, for instance, if [i] were to tap the central key on my right half i would get the number five, if i would instead held it it would give me a right-alt value. In zmk the hold-tap behaviour is highly customisable and super powerful, it can push to more complex behaviours that [i]'ve explained in this brief article, [i] highly recommend to read the documentation to unlock its full potential. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>macros____</p>
+                            </div>
+                            <div class="px-0">
+                                <p>[i]'ve settled on 34 to 36 keys, this seemed to be the sweet spot for me, there a quite a few choices of split keyboards that support this amount of keys and gives me a good balance. I can fit all the English alphabet in the main layer whilst being relatively compact.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>defines____</p>
+                            </div>
+                            <div class="px-0">
+                                <p>or simply user defined behaviours, <b>allow the user to heavily customise key combinations and behaviours to create personalised sets of keys</b>. In my setup [i] extensively use defines to create custom keys that [i] find useful in my day to day work. Furthermore [i] use defines to modify timings and properties of standard behaviours, generally [i] customise the time it takes for specific hold-tap behaviours to switch between hold and tap. I also use it to define an hold-tap-hold behaviour. For example, in any standard keyboard if the key is tapped you type the value once, if the key is held you type the value continuously until the key is released. This behaviour is extremely useful for some keys, but generally is pretty useless. In our zmk hold-tap behaviour we loose the continuous typing when the key is held in favour of defining a completely new value, which is statistically more useful for most values, but for certain ones that continuous value behaviour would still be quite nice to have. With defines we can gain it back, giving each key three different sets of behaviours. For instance in my backspace key, which is one of the keys where continuous held is quite useful, [i]'ve set up a define that allows me to have the backspace key when tapped and if held the key acts as a left shift modifier. Then by customising my define if [i] tap, release and quickly hold again the key, [i] activate an held backspace behaviour. This men [i] hold the value found on tap, giving me back the standard keyboard behaviour as well. If you're curious to see how [i]'ve configured this behaviour click <a href="https://github.com/quasimontecarlo/zmk-config/blob/304ac7577a0952dd68a97eb95224c98e033fc283/config/3x5.dtsi#L72" class="blog_body_link" target="_blank" rel="noopener noreferrer">here</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="px-0">
+                                <p>+</p>
+                            </div>
+                            <div class="px-2">
+                                <p>transparent</p>
+                            </div>
+                            <div class="px-0">
+                                <p>last on our list, but surely not last in the vast zmk suite of behaviours it's transparent keys. These are only useful when used in combination with layers and allow me to explain one more layer property i haven't touched yet. Layers are stacked on top of each other. You can think of them as sitting on top of each other, with the top layer being the one active by default. <b>Transparent keys allow the user to have the key present on the layer above slip through the layer below</b>. If you look at the image from my symbol layer you can see that on the thumb keys there are some arrows pointing down. Those are transparent keys, meaning those keys will hold the same values found on my default layer. 
+                                </p>
+                            </div>
+                        </div>
+                        <p>[i] hope this brief explanation is helpful on highlighting how zmk ( or qmk ) can help expand your keyboard potential beyond your imagination. If you spend enough time reading and playing around your preferred configuration you can really improve both your productivity and your ergonomics. To get started with zmk [i] suggest you to look at the get started page posted earlier, it might be a little intimidating at first but rest assured with enough time you will get used to it. [i] suggest you to join the zmk discord server to ask questions as well as being informed on the status of the development. Initially your zmk-config repo will point to the main zmk repo, when something changes in there it might break the github action firmware generation of your zmk-config repo. This happens and it's for sure good to keep your config repo updated with the latest development but might become a burden when all you want to do is to swap a couple of letters around. For this reason [i] suggest you to fork the zmk repo as well and point your west.yml file to it. You can see an example of how [i] point the west to my zmk fork  <a href="https://github.com/quasimontecarlo/zmk-config/blob/304ac7577a0952dd68a97eb95224c98e033fc283/config/west.yml#L7" class="blog_body_link" target="_blank" rel="noopener noreferrer">here</a>.
+                        <div class="card border-0 rounded card_txt_background">
+                            <a href="#nav">
+                                <img class="card-img-top" src="/imgs/blog/articles/colemak/nav_clean_V01.png" loading="lazy" alt="my navigation layer">
+                            </a>
+                            <a href="#_" class="lightbox" id="nav">
+                                <span style="background-image:url('/imgs/blog/articles/colemak/nav_clean_V01.png')">
+                                </span>
+                            </a>
+                        </div>
+                        </br>
+                        <p><i>re-learning to type</i></br>
+                        To end this long article [i] would like to touch on my experience in learning to touch type and offer some advice. First of all, [i] want to highlight how beneficial this exercise was for me and not only on a ergonomic sense. It is absolutely true that my bad posture was the trigger of it all, but after all, what [i]'ve found in this journey ended up meaning more than the goal [i]'ve set up to accomplish. <b>there is an absolute beauty in leaving your comfort zone, abandon something that kinda works to embrace the unknown and become bad at something you once were decent at, to eventually become better, what [i] found most satisfying of all is the pleasure of change</b>. In this journey, not only you'll have to invest quite a bit of time and energy, you'll have to study and never give up, but most of all you'll feel desperate and will question why on earth you've decided to pursue this, you'll learn how to never give up, how to slowly improve, day by day, to eventually reach your goal and be extremely satisfied. That said, as you can understand, don't enter this journey if you don't want to put some work in it, it is simply required. Second, you don't need to change everything like [i] did, [i]'ve explained in previous chapters how [i] went completely all in and decided to completely shift my way of typing, you don't need to do this, but it's surely an amazing experience. That said, [i] am writing this article, or better [i] wrote this entire website, using my new keyboard. I've completely switched to colemak-dh and are using what [i]'ve explained in the article so far. Since [i]'ve started this journey roughly 6 months have passed, and [i] am currently writing faster that [i] ever was. This to say, it is possible, you can do it, you should just never give up. So, how did [i] get here. After my keyboard was all build and [i] did set up the first version of my keyboard layout ( mostly caring just for letter placements ) [i] started to train to learn colemak-dh. To do this, [i]'ve set a minimum target of 30 minutes of training a day using <a href="https://www.keybr.com/" class="blog_body_link" target="_blank" rel="noopener noreferrer">keybr</a>. [i] can confidently say that [i] would have never reached the point [i] am at without this brilliant amazing website. [i] suggest you to make an account, customise your training goals and start typing. My learning plan was to train 30 minutes a day and reach 35wpm ( word per minute ) on each key before new keys were introduce. Keybr all point is to limit the amount of keys you will learn at the same time by supplying the user with fake words that just use the predetermined set of keys. This allows the user to gradually build muscle memory on combination of few letters and learn their position slowly. The website then introduces new letters when the predofined goal is hit. Generally when new letters are introduced your wpm will start decreasing once more until, with enough training, it gets back to the desired goal. In my experience [i]'ve spend roughly one month on keybr, training at least 30 minutes a day until [i]'ve reached my desired minimum goal of 35wpm on all letters. At that point [i] was surely slower than [i] wanted to be, but [i] knew all the new letter placements, [i] did learn colemak-dh, and was able to finally properly touch type. Typing didn't feel a burden anymore, my hands were glued to the table and my ergonomics were greatly improved.</br>
+                        Keybr then offers the ability to start introducing punctuation, capital letters and so on, but [i] didn't went straight into it, [i] wanted to start training with real words as, like said before, keybr uses made up words to train with. It was at that point that [i] started to split my training with a different amazing website <a href="https://monkeytype.com/" class="blog_body_link" target="_blank" rel="noopener noreferrer">monkeytype</a>. Monkeytype offers a slightly different training experience and [i] believe using both gives you a complete set of training tools to help you familiarise with the new keyboard. The substantial difference with keybr is that the website offers real words, but most importantly it focuses less on letters word per minute and more on your overall typing speed. [i] started training using both and also using the monkeytype quotes feature which supplies real piece of text and not made up sentences. This allowed me to start training on punctuation a little bit and [i] started to fiddle with the symbol placement on my keyboard. At this point [i] also started implementing a new training strategy as all these services focus on written English text whereas [i] also like to write code in many different languages. Here [i] didn't find any particular website that could help me so [i] just started a few coding projects [i] wanted to tackle to learn where the punctuation was on my new keyboard. Because [i] use multiple languages [i] did code in python, javascript and html, the combination of these three languages gave me a good set of symbols placement to learn. At this time [i] was really tweaking my symbol placement quite a bit, using it and having to learn the new placement. Contrarily from the letter placement there is no pre-defined layout to start from here and it's very personal, [i] suggest you to start with something and tweak it until satisfied. Overall my active training lasted roughly between two and three months, after which [i] stopped using website to train and just used my keyboard day to day and improved by just using it. The navigation layer [i] initially set up and never really tweaked all that much as that was quite intentional and the most personal of them all. You know how you use and want to use your device, you will set up the defines you feel the need the most and maybe just slightly tweak their placement, but that didn't took me to long to master. The hardest challenge was surely learning to touch type once more and properly this time. The emotional hit of feeling completely useless at something you already knew how to do is strong and with it the temptation to give up and go back to the old comfort zone. But as with all the new things, it requires effort and consistency, if you're willing to invest the time to change, you will be greatly rewarded.</br>
+                        <i>"Can you still shit-type with QWERTY? or did you forget everything?".</i></br>
+Yes, [i] still can, [i] am slower than [i] was and [i] make way more mistakes than [i] use to, but if [i] spend a couple of minutes on a standard keyboard [i] can still use it. So don't worry, your old muscle memory will still be there, just a little rusty, that's all. But the real question is, would [i] still want to use a standard QWERTY keyboard? ... certainly not.</br>
+                        </br>
+                        <em>over</em></p> 
+                    </section>
+                </div>
+            </div>
+    
+        </div>
+	</section>
+	</br>
+    </br>
+    
+    <!-- footer section -->
+    <footer id="footer">
+		<div class="container">
+
+			<div class="row">
+				<div class="col">
+					<p class="break_line text-center text-truncate footer_text">------------------------------------------------------------------------------------------------</p>
+				</div>
+			</div>
+			</br>
+			<div class="row g-0 text-start">
+        		<div class="col-5">
+					<img id="logo_button" class="svg_logo" src="/imgs/logo/lg02_V01.svg" alt="crltt logo">
+					&nbsp;
+           		</div>
+
+				<div class="col-2 text-center">
+                	<p class="footer_text">--[?!]--</p>
+            	</div>
+
+				<!-- socials -->
+				<div class="col-5 text-end socials-icons">
+    	        	<a class="hidden_link" href="https://www.imdb.com/name/nm7053849/" target="_blank" rel="noopener noreferrer">
+                	<svg class="icon" height="3rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 125 448 512">
+                	<path d="M 46.525579,344.00135 H 0 V 164.28207 h 46.525579 z m 87.112841,-95.61484 11.9028,-84.10444 h 60.56043 V 344.00135 H 165.55363 V 222.74969 L 148.02642,344.00135 H 120.16601 L 103.162,225.36569 103.0312,344.00135 H 62.221586 V 164.28207 h 60.298824 c 0.654,10.85641 3.6624,23.67481 5.6244,38.45522 z m 88.42083,95.61484 V 164.28207 h 34.79281 c 22.23602,0 35.31603,1.1772 43.16403,3.1392 7.9788,2.2236 13.9956,5.4936 18.18121,10.3332 4.05479,4.31641 6.6708,8.63281 7.5864,15.69601 1.1772,5.7552 1.8312,17.13481 1.8312,34.26961 v 63.04563 c 0,16.08841 -0.9156,26.81401 -2.4852,32.30762 -1.4388,5.3628 -4.05481,9.6792 -7.84801,12.6876 -3.6624,3.1392 -8.3712,5.3628 -13.9956,6.54001 -5.4936,1.04639 -13.86481,1.7004 -24.98281,1.7004 z m 46.43403,-148.98127 v 116.93525 c 6.67079,0 10.85639,-1.308 12.2952,-3.0084 1.4388,-2.61601 2.3544,-9.9408 2.3544,-21.84362 v -69.71642 c 0,-8.1096 -0.1308,-13.34161 -0.9156,-15.69601 -0.3924,-2.3544 -1.5696,-3.924 -3.4008,-6.14759 -1.83121,0 -5.3628,-0.52321 -10.3332,-0.52321 z m 74.94843,148.98127 V 164.28207 h 44.60281 v 57.42122 c 3.79321,-3.1392 7.97881,-6.4092 12.42601,-8.6328 4.7088,-1.962 11.5104,-3.1392 16.74241,-3.1392 6.2784,0 11.6412,1.0464 16.0884,2.8776 4.44721,1.962 7.84801,4.578 10.464,8.1096 2.22361,3.40081 3.53161,6.93241 4.05481,10.20241 0.5232,3.4008 -0.2616,10.464 -0.2616,21.1896 v 50.48883 c 0,10.7256 0.2616,18.70441 -1.0464,24.06721 -1.4388,5.232 -4.9704,9.9408 -10.20241,12.5568 -5.3628,5.1012 -11.6412,6.93241 -19.0968,6.93241 -5.23201,0 -12.03361,-1.1772 -16.61161,-3.27 -4.578,-2.3544 -8.7636,-5.886 -12.55681,-10.46401 l -2.7468,11.37961 z m 58.99082,-27.07562 c 0.9156,-2.3544 1.308,-7.848 1.308,-16.35 v -46.30322 c 0,-7.32481 -0.3924,-12.42601 -1.4388,-14.64961 -0.9156,-2.4852 -4.8396,-3.53161 -7.5864,-3.53161 -2.616,0 -4.4472,1.04641 -5.3628,3.0084 -0.78481,1.96201 -1.30801,7.06321 -1.30801,15.17282 v 47.61121 c 0,7.97881 0.5232,13.08002 1.56961,15.17282 0.78479,2.22359 2.7468,3.27 5.3628,3.27 2.8776,0 5.4936,-1.04641 7.4556,-3.40081 z"/>
+                	</svg>
+                	</a>
+					&nbsp;
+
+                	<a class="hidden_link" href="https://www.linkedin.com/in/crltt" target="_blank" rel="noopener noreferrer">
+                	<svg class="icon icon_trans" height="1.5rem" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+                	<path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+                	</svg>
+                	</a>
+					&nbsp;
+
+                	<a class="hidden_link" href="https://github.com/quasimontecarlo" target="_blank" rel="noopener noreferrer">
+                	<svg class="icon icon_trans" height="1.5rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512">
+                	<path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/>
+                	</svg>
+                	</a>
+					&nbsp;
+
+					<a class="hidden_link" ref="mailto: info@crltt.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-at"></i>
+                	<svg class="icon icon_trans" height="1.5rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                	<path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
+                 	</svg>
+                 	</a>
+				</div>
+	    	</div>
+    	</div>
+        </br>
+	</footer>
+
+	<!-- load javascript after loading all html content -->
+	<script src="/script/script.js"></script>
+
+	<body>
+</html>
