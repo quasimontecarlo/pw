@@ -220,7 +220,7 @@ a {
 .sidebar {
     min-width: 40px;
     border-style: dotted;
-    border-width: 0.2rem;
+    border-width: 1px;
     border-color: var(--db60);
 	overflow: hidden !important;
 }
@@ -238,7 +238,7 @@ a {
 }
 .anchor.post {
     border-bottom-style: dotted !important;
-    border-bottom-width: 0.2rem !important;
+    border-bottom-width: 1px !important;
     border-color: var(--db60);
 }
 .bug_icon {
